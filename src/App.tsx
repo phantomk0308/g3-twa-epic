@@ -44,10 +44,10 @@ function App() {
                 : "N/A"}
             </Button>
           </FlexBoxRow>
+          <MintOCC />
           <Counter />
           <TransferTon />
           <Jetton />
-          <MintOCC />
         </FlexBoxCol>
       </AppContainer>
     </StyledApp>

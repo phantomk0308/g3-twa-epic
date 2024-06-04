@@ -4,6 +4,8 @@ import { useTonConnect } from "../hooks/useTonConnect";
 import { useNftContract } from "../hooks/useNftContract";
 import { CHAIN } from "@tonconnect/protocol";
 
+import { Flex, Text } from "@radix-ui/themes";
+
 import {
   Card,
   FlexBoxCol,
@@ -25,7 +27,7 @@ export function MintOCC() {
   );
 
   return (
-    <Card title="Jetton">
+    <Card title="MintOCC">
       <FlexBoxCol>
         <h3>Mint OCC</h3>
         <FlexBoxRow>

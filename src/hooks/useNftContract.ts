@@ -18,7 +18,7 @@ export type mintArgs = {
 
 export function useNftContract() {
   const { client } = useTonClient();
-  const { sender, network } = useTonConnect();
+  const { sender, network, wallet } = useTonConnect();
 
   const nftContract = useAsyncInitialize(async () => {
     if (!client) return;
@@ -35,12 +35,16 @@ export function useNftContract() {
   return {
     address: nftContract?.address.toString(),
     sendMintNft: (args: mintArgs) => {
-      return nftContract?.sendMintNft(sender, {
+      
+      if (!nftContract) throw new Error("Nft contract not initialized");
+      if (!wallet) throw new Error("Wallet not initialized");
+
+      return nftContract.sendMintNft(sender, {
         value: toNano("0.02"),
         queryId: randomSeed,
         amount: toNano("0.014"),
         itemIndex: 0,
-        itemOwnerAddress: sender.address!!,
+        itemOwnerAddress: Address.parse(wallet),
         itemContent: setItemContentCell({
           name: args.name,
           description: args.description,

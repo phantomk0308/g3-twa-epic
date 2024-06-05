@@ -17,7 +17,7 @@ import {
 
 export function MintOCC() {
   const { connected } = useTonConnect();
-  const { address, sendMintNft } = useNftContract();
+  const { address, sendMintNft, sendMintNftFromFaucet } = useNftContract();
   const { network } = useTonConnect();
 
   const [name, setName] = useState("NFT Name");
@@ -77,6 +77,18 @@ export function MintOCC() {
           }}
         >
           Mint OCC
+        </Button>
+        <Button
+          disabled={!connected}
+          onClick={async () => {
+            await sendMintNftFromFaucet({
+              name,
+              description,
+              image,
+            });
+          }}
+        >
+          sendMintNftFromFaucet
         </Button>
       </FlexBoxCol>
     </Card>

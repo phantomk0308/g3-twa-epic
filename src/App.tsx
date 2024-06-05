@@ -49,7 +49,7 @@ function App() {
           <MintOCC />
           <Counter />
           <TransferTon />
-          <Jetton />
+          {/* <Jetton /> */}
         </FlexBoxCol>
       </AppContainer>
     </StyledApp>

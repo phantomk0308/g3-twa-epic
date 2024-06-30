@@ -23,6 +23,6 @@ export function Radix() {
         <Text>Hello from Radix Themes :)</Text>
         <Button>Let's go</Button>
       </Flex>
-    </>
+    </> 
   );
 }

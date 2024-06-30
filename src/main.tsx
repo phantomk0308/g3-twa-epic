@@ -1,3 +1,4 @@
+import { SDKProvider, useLaunchParams } from "@tma.js/sdk-react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { TonConnectUIProvider } from "@tonconnect/ui-react";
 import ReactDOM from "react-dom/client";
@@ -5,6 +6,7 @@ import App from "./App";
 
 import "@radix-ui/themes/styles.css";
 import "./index.css";
+import './mockEnv.ts';
 
 // this manifest is used temporarily for development purposes
 const manifestUrl =
@@ -19,9 +21,11 @@ import { Theme } from "@radix-ui/themes";
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <TonConnectUIProvider manifestUrl={manifestUrl}>
     <QueryClientProvider client={queryClient}>
-      <Theme>
-        <App />
-      </Theme>
+      <SDKProvider acceptCustomStyles debug={true}>
+        <Theme>
+          <App />
+        </Theme>
+      </SDKProvider>
     </QueryClientProvider>
   </TonConnectUIProvider>
 );

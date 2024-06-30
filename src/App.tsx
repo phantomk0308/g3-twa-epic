@@ -10,6 +10,7 @@ import { CHAIN } from "@tonconnect/protocol";
 import "@twa-dev/sdk";
 import { MintOCC } from "./components/MintOCC";
 import { Radix } from "./components/Radix";
+import { Dummy } from "./components/Dummy";
 
 const StyledApp = styled.div`
   background-color: #e8e8e8;
@@ -50,6 +51,7 @@ function App() {
           <Counter />
           <TransferTon />
           {/* <Jetton /> */}
+          <Dummy />
         </FlexBoxCol>
       </AppContainer>
     </StyledApp>

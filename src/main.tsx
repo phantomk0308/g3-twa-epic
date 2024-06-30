@@ -21,7 +21,7 @@ import { Theme } from "@radix-ui/themes";
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <TonConnectUIProvider manifestUrl={manifestUrl}>
     <QueryClientProvider client={queryClient}>
-      <SDKProvider acceptCustomStyles debug={true}>
+      <SDKProvider acceptCustomStyles>
         <Theme>
           <App />
         </Theme>

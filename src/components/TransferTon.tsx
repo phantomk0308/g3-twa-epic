@@ -38,7 +38,7 @@ export function TransferTon() {
           <label>Comment </label>
           <Input
             style={{ marginRight: 8 }}
-            value={tonRecipient}
+            value={tonComment}
             onChange={(e) => setTonComment(e.target.value)}
           ></Input>
         </FlexBoxRow>

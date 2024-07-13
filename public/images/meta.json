@@ -1,8 +1,8 @@
 {
-    "name": "epicon meta update",
+    "name": "epicon",
     "description": "Welcome to 'epic Sticker generator' where your digital assets come to life! Capture significant on-chain interactions and transform them into engaging, shareable Web3 Stickers. With <epicon>, every interaction becomes a MEME-able moment, ensuring transparent and immutable ownership on the TON blockchain.",
     "image": "https://epic.gall3ry.io/images/logo_epic.png",
-    "cover_image": "https://raw.githubusercontent.com/phantomk0308/g3-twa-epic/main/public/a01592c95129b90c.webp",
+    "cover_image": "",
     "social_links": [
 
     ],

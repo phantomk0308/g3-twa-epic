@@ -36,7 +36,7 @@ function App() {
     <StyledApp>
       <AppContainer>
         <FlexBoxCol>
-          <FlexBoxRow>
+          <FlexBoxRow style={{ justifyContent: "end" }}>
             <TonConnectButton />
             <Button>
               {network
